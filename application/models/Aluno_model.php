@@ -1,11 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-    class Aluno_model extends CI_Controller{
+    class Aluno_model extends CI_Model{
         var $table = 'alunos';
         public function __construct()
         {
-            parent::__construct();
             $this->load->database();
 
         }
@@ -45,13 +44,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->db->delete($this->table);
         }
 
-        /////////////////////////////////////////////////LOGIN////////////////////////////////////
-        function validate($email,$senha){
-            $this->db->where('email',$email);
-            $this->db->where('senha',$senha);
-            $result = $this->db->get('alunos',1);
-            return $result;
-        }
 
     }
 

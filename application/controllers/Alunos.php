@@ -6,8 +6,16 @@ class Alunos extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper('url');
-        $this->load->model('aluno_model');
-	
+        $this->load->library('session');
+
+		$this->load->model('aluno_model');
+		    $aluno = $this->session->userdata("alunos");
+		if (empty($aluno)){
+		    redirect("home/login_home");
+        }
+
+
+
 	}
 
 	public function index()

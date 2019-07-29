@@ -1,4 +1,4 @@
-<?php //include 'cabeca.php';?>
+<?php include 'cabeca.php';?>
 <div class="container">
     <br><br><br/><br/>
     <table id="" class="table table-striped table-bordered" >
